@@ -1,0 +1,2205 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CustomReferenceLineTooltips />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='viz_phase_returns' inline='true' name='federated.1d8g7t01cevwvi1439mg80eiawrj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='viz_phase_returns' name='textscan.1mmj2ux1wlwzq51gqwmfb0yyd398'>
+            <connection class='textscan' directory='Data/Visualization' filename='viz_phase_returns.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1mmj2ux1wlwzq51gqwmfb0yyd398' name='viz_phase_returns.csv' table='[viz_phase_returns#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='phase' ordinal='0' />
+            <column datatype='real' name='sp500_tr_real_pct' ordinal='1' />
+            <column datatype='real' name='ibds_real_pct' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[viz_phase_returns.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>phase</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[phase]</local-name>
+            <parent-name>[viz_phase_returns.csv]</parent-name>
+            <remote-alias>phase</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sp500_tr_real_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sp500_tr_real_pct]</local-name>
+            <parent-name>[viz_phase_returns.csv]</parent-name>
+            <remote-alias>sp500_tr_real_pct</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ibds_real_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ibds_real_pct]</local-name>
+            <parent-name>[viz_phase_returns.csv]</parent-name>
+            <remote-alias>ibds_real_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]&quot;' value='Ibovespa' />
+          <alias key='&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:sp500_tr_real_pct:qk]&quot;' value='S&amp;P500' />
+          <alias key='&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[sum:ibds_real_pct:qk]&quot;' value='Ibovespa (Real)' />
+          <alias key='&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[sum:sp500_tr_real_pct:qk]&quot;' value='S&amp;P 500 (Real)' />
+        </aliases>
+      </column>
+      <column caption='post pandemic' datatype='real' name='[Calculation_2749180137435146]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [phase] = &apos;4_post_pandemic&apos; THEN [ibds_real_pct] END' />
+      </column>
+      <column caption='viz_phase_returns.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE]' role='measure' type='quantitative' />
+      <column caption='Ibds Real Pct' datatype='real' name='[ibds_real_pct]' role='measure' type='quantitative' />
+      <column caption='Phase' datatype='string' name='[phase]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;1_pre_pandemic&quot;' value='1 - Pre (2019)' />
+          <alias key='&quot;2_shock&quot;' value='2 - Shock (2020)' />
+          <alias key='&quot;3_recovery&quot;' value='3 - Recovery (2021–2022)' />
+          <alias key='&quot;4_post_pandemic&quot;' value='4 - Post (2023–2026)' />
+        </aliases>
+      </column>
+      <column caption='Sp500 Tr Real Pct' datatype='real' name='[sp500_tr_real_pct]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ibds_real_pct]' derivation='Avg' name='[avg:ibds_real_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_real_pct]' derivation='Avg' name='[avg:sp500_tr_real_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ibds_real_pct]' derivation='Max' name='[max:ibds_real_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2749180137435146]' derivation='Sum' name='[sum:Calculation_2749180137435146:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ibds_real_pct]' derivation='Sum' name='[sum:ibds_real_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_real_pct]' derivation='Sum' name='[sum:sp500_tr_real_pct:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:sp500_tr_real_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[max:ibds_real_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[sum:ibds_real_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[sum:Calculation_2749180137435146:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[__tableau_internal_object_id__].[cnt:viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[sum:sp500_tr_real_pct:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='viz_phase_returns.csv' id='viz_phase_returns.csv_56AFC4F4992D486496644DC38E16E4BE'>
+            <properties context=''>
+              <relation connection='textscan.1mmj2ux1wlwzq51gqwmfb0yyd398' name='viz_phase_returns.csv' table='[viz_phase_returns#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='phase' ordinal='0' />
+                  <column datatype='real' name='sp500_tr_real_pct' ordinal='1' />
+                  <column datatype='real' name='ibds_real_pct' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='viz_decomposition_timeseries' inline='true' name='federated.1m6hep20864pyu14lbx4i0tvdinw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='viz_decomposition_timeseries' name='textscan.1bbl8oq056zjeo1bcpabz0zzhny7'>
+            <connection class='textscan' directory='Data/Visualization' filename='viz_decomposition_timeseries.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1bbl8oq056zjeo1bcpabz0zzhny7' name='viz_decomposition_timeseries.csv' table='[viz_decomposition_timeseries#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='date' name='month_date' ordinal='0' />
+            <column datatype='real' name='sp500_tr_usd_index' ordinal='1' />
+            <column datatype='real' name='usd_brl_index' ordinal='2' />
+            <column datatype='real' name='sp500_tr_brl_index' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[viz_decomposition_timeseries.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month_date]</local-name>
+            <parent-name>[viz_decomposition_timeseries.csv]</parent-name>
+            <remote-alias>month_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sp500_tr_usd_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sp500_tr_usd_index]</local-name>
+            <parent-name>[viz_decomposition_timeseries.csv]</parent-name>
+            <remote-alias>sp500_tr_usd_index</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usd_brl_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[usd_brl_index]</local-name>
+            <parent-name>[viz_decomposition_timeseries.csv]</parent-name>
+            <remote-alias>usd_brl_index</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sp500_tr_brl_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sp500_tr_brl_index]</local-name>
+            <parent-name>[viz_decomposition_timeseries.csv]</parent-name>
+            <remote-alias>sp500_tr_brl_index</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[avg:sp500_tr_brl_index:qk]&quot;' value='S&amp;P 500 (Total Return BRL Index)' />
+          <alias key='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[avg:sp500_tr_usd_index:qk]&quot;' value='S&amp;P 500 (Total Return USD Index)' />
+          <alias key='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[avg:usd_brl_index:qk]&quot;' value='USD to BRL (Index)' />
+          <alias key='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_brl_index:qk]&quot;' value='S&amp;P (BRL)' />
+          <alias key='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_usd_index:qk]&quot;' value='S&amp;P (USD)' />
+          <alias key='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:usd_brl_index:qk]&quot;' value='USD/BRL' />
+        </aliases>
+      </column>
+      <column caption='fx_depreciation' datatype='real' hidden='true' name='[Calculation_2749180128182277]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([usd_brl_index]) - 100' />
+      </column>
+      <column caption='viz_decomposition_timeseries.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F]' role='measure' type='quantitative' />
+      <column caption='Month Date' datatype='date' name='[month_date]' role='dimension' type='ordinal' />
+      <column caption='Sp500 Tr Brl Index' datatype='real' name='[sp500_tr_brl_index]' role='measure' type='quantitative' />
+      <column caption='Sp500 Tr Usd Index' datatype='real' name='[sp500_tr_usd_index]' role='measure' type='quantitative' />
+      <column caption='Usd Brl Index' datatype='real' name='[usd_brl_index]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_brl_index]' derivation='Avg' name='[avg:sp500_tr_brl_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_usd_index]' derivation='Avg' name='[avg:sp500_tr_usd_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[usd_brl_index]' derivation='Avg' name='[avg:usd_brl_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_brl_index]' derivation='Max' name='[max:sp500_tr_brl_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_usd_index]' derivation='Max' name='[max:sp500_tr_usd_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_brl_index]' derivation='Sum' name='[sum:sp500_tr_brl_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_usd_index]' derivation='Sum' name='[sum:sp500_tr_usd_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[usd_brl_index]' derivation='Sum' name='[sum:usd_brl_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2749180128182277]' derivation='User' name='[usr:Calculation_2749180128182277:qk:2]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[__tableau_internal_object_id__].[cnt:viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[avg:sp500_tr_usd_index:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[usr:Calculation_2749180128182277:qk:2]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:usd_brl_index:qk]&quot;</bucket>
+            </map>
+            <map to='#b3b7b8'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[avg:usd_brl_index:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[max:sp500_tr_usd_index:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_usd_index:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[avg:sp500_tr_brl_index:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[max:sp500_tr_brl_index:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_brl_index:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='viz_decomposition_timeseries.csv' id='viz_decomposition_timeseries.csv_5EAF256C4D4F4D7DB31E46EAE293971F'>
+            <properties context=''>
+              <relation connection='textscan.1bbl8oq056zjeo1bcpabz0zzhny7' name='viz_decomposition_timeseries.csv' table='[viz_decomposition_timeseries#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='date' name='month_date' ordinal='0' />
+                  <column datatype='real' name='sp500_tr_usd_index' ordinal='1' />
+                  <column datatype='real' name='usd_brl_index' ordinal='2' />
+                  <column datatype='real' name='sp500_tr_brl_index' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='viz_main_timeseries' inline='true' name='federated.1tb74ap1s6dcad14gkwfq17dx6fq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='viz_main_timeseries' name='textscan.13si2h40gyj5gx14uscm901o7ojl'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='/Users/raiannekuzer/Documents/Estudo/brazil_investment_study/Visualization/viz_main_timeseries.csv' dataRefreshTime='' directory='Data/Visualization' filename='/var/folders/ng/71jgxhf928ggn2w8bxxlgzv00000gn/T/tableau-temp/07hp2so131hr7h1gd7cn502hdl3u/viz_main_timeseries.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.13si2h40gyj5gx14uscm901o7ojl' name='viz_main_timeseries.csv' table='[viz_main_timeseries#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='date' name='month_date' ordinal='0' />
+            <column datatype='real' name='ibds_real_index' ordinal='1' />
+            <column datatype='real' name='sp500_tr_brl_real_index' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[viz_main_timeseries.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month_date]</local-name>
+            <parent-name>[viz_main_timeseries.csv]</parent-name>
+            <remote-alias>month_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_main_timeseries.csv_A83C1E5A49A243A99DCF8B09B2149A48]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ibds_real_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ibds_real_index]</local-name>
+            <parent-name>[viz_main_timeseries.csv]</parent-name>
+            <remote-alias>ibds_real_index</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_main_timeseries.csv_A83C1E5A49A243A99DCF8B09B2149A48]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sp500_tr_brl_real_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sp500_tr_brl_real_index]</local-name>
+            <parent-name>[viz_main_timeseries.csv]</parent-name>
+            <remote-alias>sp500_tr_brl_real_index</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_main_timeseries.csv_A83C1E5A49A243A99DCF8B09B2149A48]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:ibds_real_index:qk]&quot;' value='IBDS (Real Index)' />
+          <alias key='&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:sp500_tr_brl_real_index:qk]&quot;' value='S&amp;P 500 (Total Return Real Index)' />
+        </aliases>
+      </column>
+      <column caption='viz_main_timeseries.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[viz_main_timeseries.csv_A83C1E5A49A243A99DCF8B09B2149A48]' role='measure' type='quantitative' />
+      <column caption='Ibds Real Index' datatype='real' name='[ibds_real_index]' role='measure' type='quantitative' />
+      <column caption='Month Date' datatype='date' name='[month_date]' role='dimension' type='ordinal' />
+      <column caption='Sp500 Tr Brl Real Index' datatype='real' name='[sp500_tr_brl_real_index]' role='measure' type='quantitative' />
+      <column-instance column='[ibds_real_index]' derivation='Avg' name='[avg:ibds_real_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_brl_real_index]' derivation='Avg' name='[avg:sp500_tr_brl_real_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ibds_real_index]' derivation='Max' name='[max:ibds_real_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_brl_real_index]' derivation='Max' name='[max:sp500_tr_brl_real_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ibds_real_index]' derivation='Min' name='[min:ibds_real_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[ibds_real_index]' derivation='Sum' name='[sum:ibds_real_index:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sp500_tr_brl_real_index]' derivation='Sum' name='[sum:sp500_tr_brl_real_index:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:sp500_tr_brl_real_index:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[max:ibds_real_index:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[min:ibds_real_index:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[sum:ibds_real_index:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[sum:Calculation_2749179853189120:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[sum:Calculation_2749179853262849:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:ibds_real_index:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[max:sp500_tr_brl_real_index:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[sum:sp500_tr_brl_real_index:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <object-graph>
+        <objects>
+          <object caption='viz_main_timeseries.csv' id='viz_main_timeseries.csv_A83C1E5A49A243A99DCF8B09B2149A48'>
+            <properties context=''>
+              <relation connection='textscan.13si2h40gyj5gx14uscm901o7ojl' name='viz_main_timeseries.csv' table='[viz_main_timeseries#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='date' name='month_date' ordinal='0' />
+                  <column datatype='real' name='ibds_real_index' ordinal='1' />
+                  <column datatype='real' name='sp500_tr_brl_real_index' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='viz_friction_overlay' inline='true' name='federated.01c29q4154vk9k15sdqdv0ypmcek' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='viz_friction_overlay' name='textscan.14rula81tnqyqp1cml4xa0a2n1lc'>
+            <connection class='textscan' directory='Data/Visualization' filename='viz_friction_overlay.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.14rula81tnqyqp1cml4xa0a2n1lc' name='viz_friction_overlay.csv' table='[viz_friction_overlay#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='asset' ordinal='0' />
+            <column datatype='string' name='scenario' ordinal='1' />
+            <column datatype='real' name='real_return_pct' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[viz_friction_overlay.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>asset</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[asset]</local-name>
+            <parent-name>[viz_friction_overlay.csv]</parent-name>
+            <remote-alias>asset</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[viz_friction_overlay.csv_7A3CC764ACEC44C9A724DAC83BB10E21]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scenario</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[scenario]</local-name>
+            <parent-name>[viz_friction_overlay.csv]</parent-name>
+            <remote-alias>scenario</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[viz_friction_overlay.csv_7A3CC764ACEC44C9A724DAC83BB10E21]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>real_return_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[real_return_pct]</local-name>
+            <parent-name>[viz_friction_overlay.csv]</parent-name>
+            <remote-alias>real_return_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[viz_friction_overlay.csv_7A3CC764ACEC44C9A724DAC83BB10E21]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='viz_friction_overlay.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[viz_friction_overlay.csv_7A3CC764ACEC44C9A724DAC83BB10E21]' role='measure' type='quantitative' />
+      <column caption='Asset' datatype='string' name='[asset]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;IBDS&quot;' value='Ibovespa' />
+        </aliases>
+      </column>
+      <column caption='Real Return Pct' datatype='real' name='[real_return_pct]' role='measure' type='quantitative' />
+      <column caption='Scenario' datatype='string' name='[scenario]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;High tax&quot;' value='High tax (22.5%)' />
+          <alias key='&quot;Local ETF - high drag&quot;' value='Local ETF (High: 22.5% tax, 0.7% annual fee)' />
+          <alias key='&quot;Local ETF - low drag&quot;' value='Local ETF (Low: 15% tax, 0.3% annual fee)' />
+          <alias key='&quot;Low tax&quot;' value='Low tax (15%)' />
+          <alias key='&quot;US broker - high friction&quot;' value='US broker (High: 22.5% tax, 3% FX, 0.76% IOF)' />
+          <alias key='&quot;US broker - low friction&quot;' value='US broker (Low: 15% tax, 1% FX, 0.76% IOF)' />
+        </aliases>
+      </column>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='viz_friction_overlay.csv' id='viz_friction_overlay.csv_7A3CC764ACEC44C9A724DAC83BB10E21'>
+            <properties context=''>
+              <relation connection='textscan.14rula81tnqyqp1cml4xa0a2n1lc' name='viz_friction_overlay.csv' table='[viz_friction_overlay#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='asset' ordinal='0' />
+                  <column datatype='string' name='scenario' ordinal='1' />
+                  <column datatype='real' name='real_return_pct' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='monthly_market_model_tr_clean' inline='true' name='federated.0qm6ql30hb7ofo1gn5kqi00kfv5m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='monthly_market_model_tr_clean' name='textscan.1ujwc4n1v9qa6f10yzzjk1qfjvo1'>
+            <connection class='textscan' directory='Data/brazil_investment_study' filename='monthly_market_model_tr_clean.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ujwc4n1v9qa6f10yzzjk1qfjvo1' name='monthly_market_model_tr_clean.csv' table='[monthly_market_model_tr_clean#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='real' name='sp500_real_pct' ordinal='0' />
+            <column datatype='real' name='ibds_real_pct' ordinal='1' />
+            <column datatype='real' name='fx_depreciation_pct' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[monthly_market_model_tr_clean.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sp500_real_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sp500_real_pct]</local-name>
+            <parent-name>[monthly_market_model_tr_clean.csv]</parent-name>
+            <remote-alias>sp500_real_pct</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_market_model_tr_clean.csv_69AD73B2682440AD9FC0A19DB32A4CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ibds_real_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ibds_real_pct]</local-name>
+            <parent-name>[monthly_market_model_tr_clean.csv]</parent-name>
+            <remote-alias>ibds_real_pct</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_market_model_tr_clean.csv_69AD73B2682440AD9FC0A19DB32A4CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fx_depreciation_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fx_depreciation_pct]</local-name>
+            <parent-name>[monthly_market_model_tr_clean.csv]</parent-name>
+            <remote-alias>fx_depreciation_pct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_market_model_tr_clean.csv_69AD73B2682440AD9FC0A19DB32A4CF8]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='monthly_market_model_tr_clean.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[monthly_market_model_tr_clean.csv_69AD73B2682440AD9FC0A19DB32A4CF8]' role='measure' type='quantitative' />
+      <column caption='Fx Depreciation Pct' datatype='real' name='[fx_depreciation_pct]' role='measure' type='quantitative' />
+      <column caption='Ibds Real Pct' datatype='real' hidden='true' name='[ibds_real_pct]' role='measure' type='quantitative' />
+      <column caption='Sp500 Real Pct' datatype='real' hidden='true' name='[sp500_real_pct]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='monthly_market_model_tr_clean.csv' id='monthly_market_model_tr_clean.csv_69AD73B2682440AD9FC0A19DB32A4CF8'>
+            <properties context=''>
+              <relation connection='textscan.1ujwc4n1v9qa6f10yzzjk1qfjvo1' name='monthly_market_model_tr_clean.csv' table='[monthly_market_model_tr_clean#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='real' name='sp500_real_pct' ordinal='0' />
+                  <column datatype='real' name='ibds_real_pct' ordinal='1' />
+                  <column datatype='real' name='fx_depreciation_pct' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='(extra) fx'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='monthly_market_model_tr_clean' name='federated.0qm6ql30hb7ofo1gn5kqi00kfv5m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qm6ql30hb7ofo1gn5kqi00kfv5m'>
+            <column-instance column='[fx_depreciation_pct]' derivation='Avg' name='[avg:fx_depreciation_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Fx Depreciation Pct' datatype='real' name='[fx_depreciation_pct]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0qm6ql30hb7ofo1gn5kqi00kfv5m].[avg:fx_depreciation_pct:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#898989' fontname='Tableau Bold' fontsize='18'><![CDATA[+<[federated.0qm6ql30hb7ofo1gn5kqi00kfv5m].[avg:fx_depreciation_pct:qk]>%]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='18'>BRL depreciation (USD)</run>
+                <run>&#10;cumulative change (2019–2026)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{89D4EAC9-FBBB-4BBC-AB4D-8AB92B61213E}' />
+    </worksheet>
+    <worksheet name='(extra) ibds real'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_phase_returns' name='federated.1d8g7t01cevwvi1439mg80eiawrj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d8g7t01cevwvi1439mg80eiawrj'>
+            <column-instance column='[ibds_real_pct]' derivation='Avg' name='[avg:ibds_real_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Ibds Real Pct' datatype='real' name='[ibds_real_pct]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]' value='*' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='text-align' data-class='subtotal' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='vertical-align' scope='cols' value='center' />
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#e15759' fontname='Tableau Bold' fontsize='18'><![CDATA[+<[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]>%]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='18'>Ibovespa TR model</run>
+                <run>&#10;total return (IBDS 2019-2026) </run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B08FFC01-9657-4E10-9103-DF72F816C6D9}' />
+    </worksheet>
+    <worksheet name='(extra) phase4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_phase_returns' name='federated.1d8g7t01cevwvi1439mg80eiawrj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d8g7t01cevwvi1439mg80eiawrj'>
+            <column caption='post pandemic' datatype='real' name='[Calculation_2749180137435146]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [phase] = &apos;4_post_pandemic&apos; THEN [ibds_real_pct] END' />
+            </column>
+            <column-instance column='[Calculation_2749180137435146]' derivation='Avg' name='[avg:Calculation_2749180137435146:qk]' pivot='key' type='quantitative' />
+            <column caption='Ibds Real Pct' datatype='real' name='[ibds_real_pct]' role='measure' type='quantitative' />
+            <column caption='Phase' datatype='string' name='[phase]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;1_pre_pandemic&quot;' value='1 - Pre (2019)' />
+                <alias key='&quot;2_shock&quot;' value='2 - Shock (2020)' />
+                <alias key='&quot;3_recovery&quot;' value='3 - Recovery (2021–2022)' />
+                <alias key='&quot;4_post_pandemic&quot;' value='4 - Post (2023–2026)' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:Calculation_2749180137435146:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#76b7b2' fontname='Tableau Bold' fontsize='18'><![CDATA[+<[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:Calculation_2749180137435146:qk]>%]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='18'>Ibovespa outperformance</run>
+                <run>&#10;return since 2023</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0CB5B7D4-5C71-46CF-9286-F7D044ED5B23}' />
+    </worksheet>
+    <worksheet name='(extra) s&amp;p tr'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_phase_returns' name='federated.1d8g7t01cevwvi1439mg80eiawrj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d8g7t01cevwvi1439mg80eiawrj'>
+            <column-instance column='[sp500_tr_real_pct]' derivation='Avg' name='[avg:sp500_tr_real_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Sp500 Tr Real Pct' datatype='real' name='[sp500_tr_real_pct]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:sp500_tr_real_pct:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#4e79a7' fontname='Tableau Bold' fontsize='18'><![CDATA[+<[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:sp500_tr_real_pct:qk]>%]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='18'>S&amp;P 500 TR model</run>
+                <run>&#10;total return (2019–2026)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1E32E04C-7C34-4AED-8140-18767C5D1F94}' />
+    </worksheet>
+    <worksheet name='friction_layer (ibds)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0e0e0e' fontname='Tableau Bold' lmargin='225'>Ibovespa tax scenarios</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' lmargin='225'>Æ </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_friction_overlay' name='federated.01c29q4154vk9k15sdqdv0ypmcek' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01c29q4154vk9k15sdqdv0ypmcek'>
+            <column caption='Asset' datatype='string' name='[asset]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;IBDS&quot;' value='Ibovespa' />
+              </aliases>
+            </column>
+            <column-instance column='[real_return_pct]' derivation='Avg' name='[avg:real_return_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[asset]' derivation='None' name='[none:asset:nk]' pivot='key' type='nominal' />
+            <column-instance column='[scenario]' derivation='None' name='[none:scenario:nk]' pivot='key' type='nominal' />
+            <column caption='Real Return Pct' datatype='real' name='[real_return_pct]' role='measure' type='quantitative' />
+            <column caption='Scenario' datatype='string' name='[scenario]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;High tax&quot;' value='High tax (22.5%)' />
+                <alias key='&quot;Local ETF - high drag&quot;' value='Local ETF (High: 22.5% tax, 0.7% annual fee)' />
+                <alias key='&quot;Local ETF - low drag&quot;' value='Local ETF (Low: 15% tax, 0.3% annual fee)' />
+                <alias key='&quot;Low tax&quot;' value='Low tax (15%)' />
+                <alias key='&quot;US broker - high friction&quot;' value='US broker (High: 22.5% tax, 3% FX, 0.76% IOF)' />
+                <alias key='&quot;US broker - low friction&quot;' value='US broker (Low: 15% tax, 1% FX, 0.76% IOF)' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]'>
+            <groupfilter function='member' level='[none:asset:nk]' member='&quot;IBDS&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;Base&quot;' />
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;High tax&quot;' />
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;Low tax&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]' member-value='&quot;IBDS&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <slices>
+            <column>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]</column>
+            <column>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='width' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]' value='81' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]' value='172' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]</run>
+                <run>&gt;%</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]</rows>
+        <cols>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]</cols>
+      </table>
+      <simple-id uuid='{90532A41-7F75-416A-BEF6-D269D757A22C}' />
+    </worksheet>
+    <worksheet name='friction_layer (sp500)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#0e0e0e' fontname='Tableau Bold' lmargin='225'>S&amp;P 500 access scenarios</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' lmargin='225'>Æ </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_friction_overlay' name='federated.01c29q4154vk9k15sdqdv0ypmcek' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01c29q4154vk9k15sdqdv0ypmcek'>
+            <column caption='Asset' datatype='string' name='[asset]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;IBDS&quot;' value='Ibovespa' />
+              </aliases>
+            </column>
+            <column-instance column='[real_return_pct]' derivation='Avg' name='[avg:real_return_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[asset]' derivation='None' name='[none:asset:nk]' pivot='key' type='nominal' />
+            <column-instance column='[scenario]' derivation='None' name='[none:scenario:nk]' pivot='key' type='nominal' />
+            <column caption='Real Return Pct' datatype='real' name='[real_return_pct]' role='measure' type='quantitative' />
+            <column caption='Scenario' datatype='string' name='[scenario]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;High tax&quot;' value='High tax (22.5%)' />
+                <alias key='&quot;Local ETF - high drag&quot;' value='Local ETF (High: 22.5% tax, 0.7% annual fee)' />
+                <alias key='&quot;Local ETF - low drag&quot;' value='Local ETF (Low: 15% tax, 0.3% annual fee)' />
+                <alias key='&quot;Low tax&quot;' value='Low tax (15%)' />
+                <alias key='&quot;US broker - high friction&quot;' value='US broker (High: 22.5% tax, 3% FX, 0.76% IOF)' />
+                <alias key='&quot;US broker - low friction&quot;' value='US broker (Low: 15% tax, 1% FX, 0.76% IOF)' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:asset:nk]' />
+              <groupfilter function='member' level='[none:asset:nk]' member='&quot;IBDS&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;Base&quot;' />
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;Local ETF - high drag&quot;' />
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;Local ETF - low drag&quot;' />
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;US broker - high friction&quot;' />
+              <groupfilter function='member' level='[none:scenario:nk]' member='&quot;US broker - low friction&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]</column>
+            <column>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' data-class='subtotal' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]' value='420' />
+            <format attr='height' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]' value='10' />
+            <format attr='height-header' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.01c29q4154vk9k15sdqdv0ypmcek].[avg:real_return_pct:qk]</run>
+                <run>&gt;%</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]</rows>
+        <cols>[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:asset:nk]</cols>
+      </table>
+      <simple-id uuid='{6BA619A1-83C5-4928-AE1F-ABA598194E80}' />
+    </worksheet>
+    <worksheet name='real_investment_growth'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0e0e0e' fontname='Helvetica Neue' lmargin='225'>Real investment growth (BRL, total return)</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' lmargin='225'>Æ </run>
+            <run fontalignment='1' lmargin='225'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='9' lmargin='225'>Indexed to 100 (Jan 2019); S&amp;P divergence driven by faster recovery and FX effects</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_main_timeseries' name='federated.1tb74ap1s6dcad14gkwfq17dx6fq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1tb74ap1s6dcad14gkwfq17dx6fq'>
+            <column-instance column='[ibds_real_index]' derivation='Avg' name='[avg:ibds_real_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sp500_tr_brl_real_index]' derivation='Avg' name='[avg:sp500_tr_brl_real_index:qk]' pivot='key' type='quantitative' />
+            <column caption='Ibds Real Index' datatype='real' name='[ibds_real_index]' role='measure' type='quantitative' />
+            <column-instance column='[month_date]' derivation='Max' name='[max:month_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Month Date' datatype='date' name='[month_date]' role='dimension' type='ordinal' />
+            <column caption='Sp500 Tr Brl Real Index' datatype='real' name='[sp500_tr_brl_real_index]' role='measure' type='quantitative' />
+            <column-instance column='[month_date]' derivation='Month-Trunc' name='[tmn:month_date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:ibds_real_index:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:sp500_tr_brl_real_index:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <encoding attr='space' class='0' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' field-type='quantitative' max='314.55378151260498' min='70.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' scope='cols' value='Date' />
+            <format attr='height' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' value='34' />
+            <encoding attr='space' class='0' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' field-type='quantitative' major-origin='#2019-01-01 00:00:00#' major-spacing='1.0' major-units='years' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' value='35' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' value='bold' />
+            <format attr='font-family' field='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#00000000' />
+            <format attr='background-color' id='refline0' value='#ffffff' />
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#e6e6e6' />
+            <format attr='text-align' id='refline0' value='auto' />
+            <format attr='font-family' id='refline0' value='Tableau Semibold' />
+            <format attr='fill-above' id='refline3' value='#00000000' />
+            <format attr='fill-below' id='refline3' value='#00000000' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='reverse-palette' id='refline1' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='line-pattern-only' scope='rows' value='dotted' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='line-visibility' id='annotation_2' value='on' />
+            <format attr='line-pattern-only' id='annotation_2' value='dotted' />
+            <format attr='stroke-size' id='annotation_2' value='2' />
+            <format attr='stroke-color' id='annotation_2' value='#666666' />
+            <format attr='line-visibility' id='annotation_3' value='on' />
+            <format attr='line-pattern-only' id='annotation_3' value='dotted' />
+            <format attr='stroke-size' id='annotation_3' value='2' />
+            <format attr='stroke-color' id='annotation_3' value='#666666' />
+            <format attr='line-end-size' id='annotation_7' value='small' />
+            <format attr='body-type' id='annotation_6' value='box' />
+            <format attr='rounding' id='annotation_6' value='large' />
+            <format attr='body-type' id='annotation_7' value='box' />
+            <format attr='rounding' id='annotation_7' value='large' />
+            <format attr='stroke-color' id='annotation_7' value='#1b1b1b' />
+            <format attr='stroke-color' id='annotation_6' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <reference-line axis-column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' tooltip='Baseline (Jan 2019): All returns indexed to 100' tooltip-type='custom' value='100.0' value-column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' z-order='1' />
+            <reference-line axis-column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='total' id='refline1' label-type='automatic' percentage-bands='true' scope='per-table' symmetric='false' value-column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' z-order='2'>
+              <reference-line-value percentage='60' />
+              <reference-line-value percentage='80' />
+            </reference-line>
+            <reference-line axis-column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' enable-instant-analytics='true' formula='constant' id='refline2' label-type='none' scope='per-table' tooltip='Pandemic shock (2020): Both markets decline.' tooltip-type='custom' value='#2020-03-07 00:00:00#' value-column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]' z-order='3' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]' />
+              <text column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' />
+            </encodings>
+            <label-data column='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[max:month_date:qk]' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[Date: <[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true'><![CDATA[<[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]>: <[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Tableau Bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-range-scope' value='multi-mark' />
+                <format attr='mark-labels-mode' value='most-recent' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='29' />
+                <format attr='mark-markers-mode' value='auto' />
+                <format attr='mark-color' value='#b4b4b4' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values] + [federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values])</rows>
+        <cols>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</cols>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontname='Tableau Semibold' fontsize='8'>Pandemic shock</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2019-09-10 23:41:06.630#'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='269.69480383869518'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2020-08-21 06:51:56.765#'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='247.98884689970657'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='198'>
+            <formatted-text>
+              <run bold='true' fontname='Tableau Semibold' fontsize='8'>Recovery divergence</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='8'>Ibovespa fails to sustain recovery</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2021-01-01 06:57:53.854#'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='96.085736694677877'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='97' y='-33' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='0' text-width='140'>
+            <formatted-text>
+              <run bold='true' fontname='Tableau Semibold' fontsize='8'>Ibovespa recovery</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='8'>Insufficient to close gap</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='#2025-06-23 16:57:11.159#'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='121.14850332289778'>
+                  <node-reference>
+                    <axis>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-31' y='-57' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='64'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#757575'>Æ </run>
+              <run bold='true' fontalignment='1'><![CDATA[<[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:sp500_tr_brl_real_index:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[max:month_date:qk]</field>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</field>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]</field>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>#2020-03-01#</value>
+                    <value>#2020-03-01 00:00:00#</value>
+                    <value>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:sp500_tr_brl_real_index:qk]&quot;</value>
+                    <value>130.06</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='39' y='-35' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='64'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#757575'>Æ </run>
+              <run bold='true' fontalignment='1'><![CDATA[<[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:ibds_real_index:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[max:month_date:qk]</field>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[tmn:month_date:qk]</field>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]</field>
+                      <field>[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[Multiple Values]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>#2020-03-01#</value>
+                    <value>#2020-03-01 00:00:00#</value>
+                    <value>&quot;[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[avg:ibds_real_index:qk]&quot;</value>
+                    <value>72.620000000000005</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-49' y='-16' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{3B0F9586-4ED4-4897-8725-410BB3202006}' />
+    </worksheet>
+    <worksheet name='return_decomposition'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#0e0e0e' fontname='Tableau Semibold' fontsize='12' lmargin='225'>S&amp;P 500 return decomposition (BRL)</run>
+            <run fontalignment='1' lmargin='225'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='9' lmargin='225'>FX depreciation amplifies USD returns in local terms</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_decomposition_timeseries' name='federated.1m6hep20864pyu14lbx4i0tvdinw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m6hep20864pyu14lbx4i0tvdinw'>
+            <column caption='Month Date' datatype='date' name='[month_date]' role='dimension' type='ordinal' />
+            <column caption='Sp500 Tr Brl Index' datatype='real' name='[sp500_tr_brl_index]' role='measure' type='quantitative' />
+            <column caption='Sp500 Tr Usd Index' datatype='real' name='[sp500_tr_usd_index]' role='measure' type='quantitative' />
+            <column-instance column='[sp500_tr_brl_index]' derivation='Sum' name='[sum:sp500_tr_brl_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sp500_tr_usd_index]' derivation='Sum' name='[sum:sp500_tr_usd_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usd_brl_index]' derivation='Sum' name='[sum:usd_brl_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[month_date]' derivation='Month-Trunc' name='[tmn:month_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Usd Brl Index' datatype='real' name='[usd_brl_index]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_usd_index:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:usd_brl_index:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_brl_index:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_usd_index:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:usd_brl_index:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1m6hep20864pyu14lbx4i0tvdinw].[sum:sp500_tr_brl_index:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1m6hep20864pyu14lbx4i0tvdinw].[Multiple Values]' field-type='quantitative' max='450.65669464847855' min='100.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1m6hep20864pyu14lbx4i0tvdinw].[tmn:month_date:qk]' scope='cols' value='Month/Year' />
+            <format attr='height' field='[federated.1m6hep20864pyu14lbx4i0tvdinw].[tmn:month_date:qk]' value='22' />
+            <format attr='width' field='[federated.1m6hep20864pyu14lbx4i0tvdinw].[Multiple Values]' value='32' />
+          </style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='legend'>
+            <_.fcp.IndividualControlFormatting.true...format attr='border-style' field='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]' id='legend-color' value='dotted' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]' />
+              <text column='[federated.1m6hep20864pyu14lbx4i0tvdinw].[Multiple Values]' />
+              <tooltip column='[federated.1m6hep20864pyu14lbx4i0tvdinw].[Multiple Values]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontname='Tableau Medium'><![CDATA[Date: <[federated.1m6hep20864pyu14lbx4i0tvdinw].[tmn:month_date:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='Tableau Medium'><![CDATA[: <[federated.1m6hep20864pyu14lbx4i0tvdinw].[Multiple Values]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontname='Tableau Medium'>&lt;All Fields&gt;</run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true'>S&amp;P (BRL) = S&amp;P (USD) × FX (USD/BRL)</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-line-first' value='false' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m6hep20864pyu14lbx4i0tvdinw].[Multiple Values]</rows>
+        <cols>[federated.1m6hep20864pyu14lbx4i0tvdinw].[tmn:month_date:qk]</cols>
+      </table>
+      <simple-id uuid='{BC822628-5354-4AA0-80CC-58DEF9F89804}' />
+    </worksheet>
+    <worksheet name='returns_by_market_phase'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='viz_phase_returns' name='federated.1d8g7t01cevwvi1439mg80eiawrj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1d8g7t01cevwvi1439mg80eiawrj'>
+            <column-instance column='[ibds_real_pct]' derivation='Avg' name='[avg:ibds_real_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sp500_tr_real_pct]' derivation='Avg' name='[avg:sp500_tr_real_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Ibds Real Pct' datatype='real' name='[ibds_real_pct]' role='measure' type='quantitative' />
+            <column-instance column='[phase]' derivation='None' name='[none:phase:nk]' pivot='key' type='nominal' />
+            <column caption='Phase' datatype='string' name='[phase]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;1_pre_pandemic&quot;' value='1 - Pre (2019)' />
+                <alias key='&quot;2_shock&quot;' value='2 - Shock (2020)' />
+                <alias key='&quot;3_recovery&quot;' value='3 - Recovery (2021–2022)' />
+                <alias key='&quot;4_post_pandemic&quot;' value='4 - Post (2023–2026)' />
+              </aliases>
+            </column>
+            <column caption='Sp500 Tr Real Pct' datatype='real' name='[sp500_tr_real_pct]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:sp500_tr_real_pct:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[Multiple Values]' value='36' />
+            <format attr='height' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='22' />
+            <encoding attr='space' class='0' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[Multiple Values]' field-type='quantitative' max='52.0' min='-20.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[avg:ibds_real_pct:qk]' value='*' />
+            <format attr='color' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[none:phase:nk]' value='#d3b348' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[none:phase:nk]' value='11' />
+            <format attr='height-header' value='10' />
+            <format attr='font-size' data-class='total' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='8' />
+            <format attr='font-weight' data-class='total' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='bold' />
+            <format attr='font-family' data-class='total' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='Tableau Medium' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='false' />
+            <format attr='font-size' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='8' />
+            <format attr='font-family' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='Tableau Medium' />
+            <format attr='font-weight' field='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' value='bold' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='off' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' />
+              <text column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[Multiple Values]' />
+              <text column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' />
+            </encodings>
+            <reference-line axis-column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-table' tooltip='' tooltip-type='custom' value='0.0' value-column='[federated.1d8g7t01cevwvi1439mg80eiawrj].[Multiple Values]' z-order='1' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='match' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-family' value='Tableau Bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1d8g7t01cevwvi1439mg80eiawrj].[Multiple Values]</rows>
+        <cols>([federated.1d8g7t01cevwvi1439mg80eiawrj].[none:phase:nk] / [federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{294068D1-4C01-45F3-9D28-CEB367782677}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='S&amp;P 500 vs Ibovespa (2019-2026)'>
+      <style />
+      <size maxheight='1300' maxwidth='1200' minheight='1300' minwidth='1200' preset-index='16' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='88462' id='32' param='horz' type-v2='layout-flow' w='98666' x='667' y='10923'>
+            <zone h='88462' id='30' type-v2='layout-basic' w='98666' x='667' y='10923'>
+              <zone h='26785' id='8' param='horz' type-v2='layout-flow' w='98666' x='667' y='20951'>
+                <zone h='26785' id='3' param='vert' type-v2='layout-flow' w='98666' x='667' y='20951'>
+                  <zone h='26785' id='5' param='horz' type-v2='layout-flow' w='98666' x='667' y='20951'>
+                    <zone h='26785' id='6' name='real_investment_growth' w='98666' x='667' y='20951'>
+                      <layout-cache minheight='193' minwidth='161' type-h='scalable' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='25205' id='11' name='returns_by_market_phase' w='62832' x='667' y='54119'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='31588' id='13' name='return_decomposition' w='35834' x='63499' y='47736'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16858' id='15' name='friction_layer (sp500)' w='49498' x='667' y='79324'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16858' id='16' name='friction_layer (ibds)' w='49168' x='50165' y='79324'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10028' id='17' name='(extra) s&amp;p tr' show-title='false' w='20750' x='667' y='10923'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10028' id='18' name='(extra) ibds real' show-title='false' w='23583' x='21417' y='10923'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10028' id='19' name='(extra) fx' show-title='false' w='27750' x='45000' y='10923'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10028' id='20' name='(extra) phase4' show-title='false' w='26583' x='72750' y='10923'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='3203' id='21' type-v2='text' w='98666' x='667' y='96182'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1'>Even under high-friction assumptions, S&amp;P returns (~130%) remain far above IBDS (~30%)</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='6383' id='36' type-v2='text' w='62832' x='667' y='47736'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#0e0e0e' fontname='Tableau Semibold' fontsize='12'>Returns by market phase (BRL)</run>
+                  <run fontalignment='1' lmargin='225'>Æ&#10;</run>
+                  <run bold='true' fontalignment='1' lmargin='225'>Divergence emerges during recovery; Ibovespa outperforms only later</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='10308' id='37' type-v2='text' w='98666' x='667' y='615'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Medium' fontsize='16'>S&amp;P 500 vs Ibovespa: which delivered better real returns? (2019–2026)</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run bold='true' fontalignment='1' fontname='Tableau Semibold'>Inflation-adjusted BRL returns across market phases (index = 100, Jan 2019). </run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='2'>Æ&#10;</run>
+              <run bold='true' fontalignment='2' fontname='Tableau Semibold'>Raianne Kuzer | Data Analyst | Financial dataset</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='6889' id='33' name='return_decomposition' pane-specification-id='1' param='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]' show-title='false' type-v2='color' w='11833' x='67333' y='55222' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='51' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98770' id='50' param='vert' type-v2='layout-flow' w='98666' x='667' y='615'>
+                <zone forceUpdate='true' h='10308' id='37' type-v2='text' w='98666' x='667' y='615'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Medium' fontsize='16'>S&amp;P 500 vs Ibovespa: which delivered better real returns? (2019–2026)</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontname='Tableau Semibold'>Inflation-adjusted BRL returns across market phases (index = 100, Jan 2019). </run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run bold='true' fontalignment='2' fontname='Tableau Semibold'>Raianne Kuzer | Data Analyst | Financial dataset</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='122' h='10028' id='17' is-fixed='true' name='(extra) s&amp;p tr' show-title='false' w='20750' x='667' y='10923'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='122' h='10028' id='18' is-fixed='true' name='(extra) ibds real' show-title='false' w='23583' x='21417' y='10923'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='122' h='10028' id='19' is-fixed='true' name='(extra) fx' show-title='false' w='27750' x='45000' y='10923'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='122' h='10028' id='20' is-fixed='true' name='(extra) phase4' show-title='false' w='26583' x='72750' y='10923'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='26785' id='6' is-fixed='true' name='real_investment_growth' w='98666' x='667' y='20951'>
+                  <layout-cache minheight='193' minwidth='161' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='6383' id='36' type-v2='text' w='62832' x='667' y='47736'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#0e0e0e' fontname='Tableau Semibold' fontsize='12'>Returns by market phase (BRL)</run>
+                    <run fontalignment='1' lmargin='225'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' lmargin='225'>Divergence emerges during recovery; Ibovespa outperforms only later</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='31588' id='13' is-fixed='true' name='return_decomposition' w='35834' x='63499' y='47736'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6889' id='33' name='return_decomposition' pane-specification-id='1' param='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]' show-title='false' type-v2='color' w='11833' x='67333' y='55222'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='25205' id='11' is-fixed='true' name='returns_by_market_phase' w='62832' x='667' y='54119'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='211' h='16858' id='15' is-fixed='true' name='friction_layer (sp500)' w='49498' x='667' y='79324'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='211' h='16858' id='16' is-fixed='true' name='friction_layer (ibds)' w='49168' x='50165' y='79324'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3203' id='21' type-v2='text' w='98666' x='667' y='96182'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1'>Even under high-friction assumptions, S&amp;P returns (~130%) remain far above IBDS (~30%)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{426E3A08-31C2-4CD8-8996-4DB7FBB69033}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='135'>
+    <window class='dashboard' maximized='true' name='S&amp;P 500 vs Ibovespa (2019-2026)'>
+      <viewpoints>
+        <viewpoint name='(extra) fx' />
+        <viewpoint name='(extra) ibds real' />
+        <viewpoint name='(extra) phase4' />
+        <viewpoint name='(extra) s&amp;p tr' />
+        <viewpoint name='friction_layer (ibds)'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='friction_layer (sp500)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='real_investment_growth'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='return_decomposition'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='returns_by_market_phase'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='21' />
+      <simple-id uuid='{FF3667D5-C031-4BAF-A1AE-0C397ECD3DAE}' />
+    </window>
+    <window class='worksheet' hidden='true' name='(extra) fx'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DB5D2F74-1151-4A5D-9BB5-5EB34DD798A9}' />
+    </window>
+    <window class='worksheet' hidden='true' name='(extra) ibds real'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5B51964E-5069-4B64-9877-676687C38D6A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='(extra) phase4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EB12B402-2C22-43FD-A3B7-7F0665553920}' />
+    </window>
+    <window class='worksheet' hidden='true' name='(extra) s&amp;p tr'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{03874BFF-14E5-42EA-823C-BE85F4014170}' />
+    </window>
+    <window class='worksheet' hidden='true' name='friction_layer (ibds)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EBC0F623-5888-4AD0-825A-3A4DBEA77905}' />
+    </window>
+    <window class='worksheet' hidden='true' name='friction_layer (sp500)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.01c29q4154vk9k15sdqdv0ypmcek].[none:scenario:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8870795C-1F90-48FB-845F-2C21ACAD98CD}' />
+    </window>
+    <window class='worksheet' hidden='true' name='real_investment_growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='3' param='[federated.1tb74ap1s6dcad14gkwfq17dx6fq].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{51B768CD-E54A-465E-8D5F-F3166F1DF090}' />
+    </window>
+    <window class='worksheet' hidden='true' name='return_decomposition'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1m6hep20864pyu14lbx4i0tvdinw].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3041DBC5-5D97-45A7-85C8-453C06B893FB}' />
+    </window>
+    <window class='worksheet' hidden='true' name='returns_by_market_phase'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1d8g7t01cevwvi1439mg80eiawrj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{89FFB5E6-ED81-4BA7-9C2E-B11E4493D1DD}' />
+    </window>
+  </windows>
+</workbook>

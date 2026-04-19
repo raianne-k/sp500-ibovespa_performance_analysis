@@ -4,7 +4,7 @@
 **Domain:** Financial Markets / Macro  
 **Tools:** SQL (PostgreSQL + DBeaver), Tableau  
 **Datasets:** Public market data (S&P 500 TR, Ibovespa, USD/BRL, CPI)  
-**Dashboard:** *(see /assets/S&P 500 vs Ibovespa (2019-2026).png)*
+**Dashboard:** View Interactive Dashboard ([Tableau](https://dub01.online.tableau.com/t/raiannekuzer-97d71c93bf/views/SP500vsIbovespa-Investmentanalysis/SP500vsIbovespa2019-2026)) | *(see /assets/S&P 500 vs Ibovespa (2019-2026).png)*
 
 ---
 
